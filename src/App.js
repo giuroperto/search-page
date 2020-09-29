@@ -1,0 +1,14 @@
+import React from 'react';
+// import './css/global.css';
+import Routes from './routes';
+
+const App = () => {
+
+  return (
+    <div className="App">
+      <Routes />
+    </div>
+  );
+}
+
+export default App;

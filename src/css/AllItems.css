@@ -1,0 +1,75 @@
+.lista-items-delivery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .lista-items-delivery-container .header-lista-items-delivery {
+    margin-top: 2vh;
+    display: flex;
+    align-items: center; }
+    .lista-items-delivery-container .header-lista-items-delivery h2 {
+      margin-left: 5vw;
+      width: 60vw; }
+    .lista-items-delivery-container .header-lista-items-delivery .link-style {
+      text-decoration: none;
+      color: black; }
+      .lista-items-delivery-container .header-lista-items-delivery .link-style .icon {
+        font-size: 2.5rem;
+        position: absolute;
+        right: 5vw;
+        top: 4vh; }
+    .lista-items-delivery-container .header-lista-items-delivery .logo {
+      width: 20vw;
+      margin-right: 3vw; }
+  .lista-items-delivery-container .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+    .lista-items-delivery-container .search-bar input {
+      width: 50vw;
+      margin-right: 5vw; }
+  .lista-items-delivery-container .page-style {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .lista-items-delivery-container .page-style .item {
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      width: 70vw;
+      align-items: center;
+      margin-bottom: 5px; }
+      .lista-items-delivery-container .page-style .item h4 {
+        margin-bottom: 5px;
+        text-align: center; }
+      .lista-items-delivery-container .page-style .item p {
+        margin: 0 0 5px; }
+      .lista-items-delivery-container .page-style .item .price {
+        color: tomato;
+        font-size: 1.3rem; }
+  .lista-items-delivery-container .go-up {
+    position: fixed;
+    right: 2.5vw;
+    bottom: 4vh; }
+
+@media only screen and (min-width: 840px) {
+  .lista-items-delivery-container .header-lista-items-delivery {
+    margin-top: 0; }
+    .lista-items-delivery-container .header-lista-items-delivery h2 {
+      margin-left: 25vw;
+      font-size: 2.5rem; }
+    .lista-items-delivery-container .header-lista-items-delivery .logo {
+      width: 15vw; }
+  .lista-items-delivery-container .search-bar {
+    margin-bottom: 20px;
+    position: relative;
+    top: -5vh; }
+  .lista-items-delivery-container .page-style {
+    width: 99vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .lista-items-delivery-container .page-style .item {
+      width: 30vw;
+      min-height: 22vh;
+      margin: 0 10px 10px 0; } }
