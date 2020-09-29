@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import DadosDeliveryItems from '../../Dados/Delivery-Items';
 import ScrollTop from '../Atom/Go-Up/Go-Up';
 
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaMotorcycle } from "react-icons/fa";
 
 const ListaDeliveryItems = () => {
 
@@ -43,7 +43,10 @@ const ListaDeliveryItems = () => {
     <div className="lista-items-delivery-container">
       <div className="header-lista-items-delivery">
         <Link to="/"><img className="logo" src="https://res.cloudinary.com/dxatyucj2/image/upload/v1597523783/Cantina/removebg-logo_yvoogc.png" alt="Logo Empório Roperto"/></Link>
-        <h2>CONSULTAR ITEM</h2>
+        <div className="title">
+          <h2>CONSULTAR ITEM (DELIVERY)</h2>
+          <FaMotorcycle className="icon"/>
+        </div>
       </div>
       <div className="search-bar">
         <input type="text" value={searchWord} placeholder="Digite o nome do item" onChange={handleChange} />

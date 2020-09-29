@@ -6,9 +6,17 @@
     margin-top: 2vh;
     display: flex;
     align-items: center; }
-    .lista-items-delivery-container .header-lista-items-delivery h2 {
-      margin-left: 5vw;
+    .lista-items-delivery-container .header-lista-items-delivery .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 60vw; }
+      .lista-items-delivery-container .header-lista-items-delivery .title h2 {
+        margin-left: 5vw;
+        font-size: 1rem; }
+      .lista-items-delivery-container .header-lista-items-delivery .title .icon {
+        margin-left: 3vw;
+        font-size: 2.5rem; }
     .lista-items-delivery-container .header-lista-items-delivery .link-style {
       text-decoration: none;
       color: black; }
@@ -41,7 +49,8 @@
       margin-bottom: 5px; }
       .lista-items-delivery-container .page-style .item h4 {
         margin-bottom: 5px;
-        text-align: center; }
+        text-align: center;
+        width: 60vw; }
       .lista-items-delivery-container .page-style .item p {
         margin: 0 0 5px; }
       .lista-items-delivery-container .page-style .item .price {
@@ -55,8 +64,10 @@
 @media only screen and (min-width: 840px) {
   .lista-items-delivery-container .header-lista-items-delivery {
     margin-top: 0; }
-    .lista-items-delivery-container .header-lista-items-delivery h2 {
-      margin-left: 25vw;
+    .lista-items-delivery-container .header-lista-items-delivery .title .icon {
+      font-size: 2.5rem; }
+    .lista-items-delivery-container .header-lista-items-delivery .title h2 {
+      margin-left: 5vw;
       font-size: 2.5rem; }
     .lista-items-delivery-container .header-lista-items-delivery .logo {
       width: 15vw; }
@@ -70,6 +81,8 @@
     flex-wrap: wrap;
     justify-content: center; }
     .lista-items-delivery-container .page-style .item {
-      width: 30vw;
+      width: 25vw;
       min-height: 22vh;
-      margin: 0 10px 10px 0; } }
+      margin: 0 10px 10px 0; }
+      .lista-items-delivery-container .page-style .item h4 {
+        width: 22vw; } }

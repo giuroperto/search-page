@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../../../css/Go-Up.css';
+import '../../../css/Go-Up.css';
 
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
