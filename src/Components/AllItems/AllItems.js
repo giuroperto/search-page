@@ -55,19 +55,19 @@ const ListaDeliveryItems = () => {
       <div className="page-style">
       {
         search ? (
-          DadosDeliveryItems.filter((item) => (item.Item.toLowerCase().includes(searchWord.toLowerCase())) || (item.Group.toLowerCase().includes(searchWord.toLowerCase()))).map((item, idx) => (
+          DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
             <div className="item" key={idx}>
-              <h4>{item.Item}</h4>
-              <p>{item.Group}</p>
-              <p className="price">R$ {item.Price}</p>
+              <h4>{item.ITEM}</h4>
+              <p>{item.GROUP}</p>
+              <p className="price">R$ {item.PRICE_DELIVERY}</p>
             </div>
           ))
         ) : (
-          DadosDeliveryItems.map((item, idx) => (
+          DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0)).map((item, idx) => (
             <div className="item" key={idx}>
-              <h4>{item.Item}</h4>
-              <p>{item.Group}</p>
-              <p className="price">R$ {item.Price}</p>
+              <h4>{item.ITEM}</h4>
+              <p>{item.GROUP}</p>
+              <p className="price">R$ {item.PRICE_DELIVERY}</p>
             </div>
           )))
       }
