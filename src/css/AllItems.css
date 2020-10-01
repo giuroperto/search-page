@@ -28,12 +28,44 @@
     .lista-items-delivery-container .header-lista-items-delivery .logo {
       width: 20vw;
       margin-right: 3vw; }
+  .lista-items-delivery-container .toggle-btn {
+    display: inline-block;
+    margin: 0 auto 5vh;
+    position: relative;
+    top: -6vh; }
+    .lista-items-delivery-container .toggle-btn input {
+      margin: 0;
+      display: inline; }
+    .lista-items-delivery-container .toggle-btn input[name='type'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: none; }
+      .lista-items-delivery-container .toggle-btn input[name='type']:after {
+        content: attr(value);
+        font-size: 2.5vh;
+        text-align: center;
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.7);
+        padding: 2vh 3vw;
+        transition: box-shadow 1s, color 1s;
+        background-color: gray; }
+      .lista-items-delivery-container .toggle-btn input[name='type']:checked:after {
+        box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.4);
+        background-color: indianred;
+        color: black;
+        font-weight: bold;
+        padding: 2vh 2vw; }
   .lista-items-delivery-container .search-bar {
     display: flex;
     justify-content: center;
     margin-bottom: 20px; }
     .lista-items-delivery-container .search-bar input {
       width: 50vw;
+      height: 5vh;
+      font-size: 1rem;
       margin-right: 5vw; }
   .lista-items-delivery-container .page-style {
     width: 95vw;
