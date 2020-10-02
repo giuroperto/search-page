@@ -1,5 +1,5 @@
 $font-size: 1rem;
-$font-size-desktop: 2.5rem;
+$font-size-desktop: 2.2rem;
 $icon: 2.5rem;
 
 .lista-items-delivery-container {
@@ -59,7 +59,7 @@ $icon: 2.5rem;
       display: inline;
     }
 
-    input[name='type'] {
+    input[name='price-type'] {
       -webkit-appearance: none;
       -moz-appearance: none;
       -o-appearance: none;
@@ -68,7 +68,6 @@ $icon: 2.5rem;
       outline: none;
 
       &:after {
-        // font-family: 'Petit Formal Script', cursive;
         content: attr(value);
         font-size: 2.5vh;
         text-align: center;
@@ -85,7 +84,6 @@ $icon: 2.5rem;
           background-color: indianred;
           color: black;
           font-weight: bold;
-          padding: 2vh 2vw;
         }
       }
     }

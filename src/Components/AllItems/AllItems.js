@@ -41,8 +41,6 @@ const ListaDeliveryItems = () => {
   };
 
   const changeType = (e) => {
-    e.preventDefault();
-
     const { value } = e.target;
 
     setType(value);
@@ -58,8 +56,8 @@ const ListaDeliveryItems = () => {
         </div>
       </div>
       <div className="toggle-btn">
-        <input type="radio" name="type" value="DELIVERY" onClick={changeType} />
-        <input type="radio" name="type" value="SALÃO" onClick={changeType} />
+        <input type="radio" name="price-type" value="DELIVERY" onClick={changeType} />
+        <input type="radio" name="price-type" value="SALÃO" onClick={changeType} />
       </div>
       <div className="search-bar">
         <input type="text" value={searchWord} placeholder="Digite o nome do item" onChange={handleChange} />
