@@ -141,7 +141,13 @@ $icon: 2.5rem;
     right: 1vw;
     bottom: 1vh;
     border: 1px solid black;
-    background-color: gray;
+    background-color: lightgray;
+
+    .total-order {
+      color: aquamarine;
+      font-size: 25px;
+      font-weight: bold;
+    }
   }
 
   .go-up {

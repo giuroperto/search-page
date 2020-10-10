@@ -142,12 +142,12 @@ const ListaDeliveryItems = () => {
             order.map((el, idx) => {
               return (
                 <div className="cart-item" key={idx}>
-                  <p><span>{el.name}</span><span>{el.adjValue}</span></p>
+                  <p><span>{el.name}</span><span> R${el.adjValue}</span></p>
                 </div>
               )
             })
           }
-            <p>{totalOrder}</p>
+            <p className="total-order">{totalOrder}</p>
             <button onClick={resetCart}>RESET</button>
           </div>
         )

@@ -94,7 +94,11 @@
     right: 1vw;
     bottom: 1vh;
     border: 1px solid black;
-    background-color: gray; }
+    background-color: lightgray; }
+    .lista-items-delivery-container .cart .total-order {
+      color: aquamarine;
+      font-size: 25px;
+      font-weight: bold; }
   .lista-items-delivery-container .go-up {
     position: fixed;
     right: 2.5vw;
