@@ -104,7 +104,7 @@ $icon: 2.5rem;
   }
 
   .page-style {
-    width: 95vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,6 +132,16 @@ $icon: 2.5rem;
         font-size: 1.3rem;
       }
     }
+  }
+
+  .cart {
+    position: fixed;
+    width: 30vw;
+    padding-left: 1vw;
+    right: 1vw;
+    bottom: 1vh;
+    border: 1px solid black;
+    background-color: gray;
   }
 
   .go-up {
@@ -169,7 +179,7 @@ $icon: 2.5rem;
     }
   
     .page-style {
-      width: 99vw;
+      width: 70vw;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
