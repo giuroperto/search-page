@@ -147,8 +147,8 @@ const ListaDeliveryItems = () => {
               )
             })
           }
-            <p className="total-order">{totalOrder}</p>
-            <button onClick={resetCart}>RESET</button>
+            <p className="total-order">R$ {totalOrder}</p>
+            <button className="reset-order" onClick={resetCart}>RESET</button>
           </div>
         )
       }

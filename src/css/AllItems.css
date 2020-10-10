@@ -94,11 +94,22 @@
     right: 1vw;
     bottom: 1vh;
     border: 1px solid black;
-    background-color: lightgray; }
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .lista-items-delivery-container .cart .total-order {
-      color: aquamarine;
+      color: darkgreen;
       font-size: 25px;
-      font-weight: bold; }
+      font-weight: bold;
+      text-align: center; }
+    .lista-items-delivery-container .cart .reset-order {
+      background-color: darkred;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      margin: 0 auto 5px;
+      width: 10vw; }
   .lista-items-delivery-container .go-up {
     position: fixed;
     right: 2.5vw;
