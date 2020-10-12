@@ -12,6 +12,8 @@ const ListaDeliveryItems = () => {
   const [ search, setSearch ] = useState(false);
   const [ pageHeight, setPageHeight ] = useState(0);
   const [ type, setType ] = useState("DELIVERY");
+  const [ order, setOrder ] = useState([]);
+  const [ totalOrder, setTotalOrder ] = useState(0);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -46,6 +48,31 @@ const ListaDeliveryItems = () => {
     setType(value);
   };
 
+  const saveItem = (e) => {
+    e.preventDefault();
+
+    const { name, value } = e.target;
+
+    const adjValue = Number(value);
+
+    const newItem = { name, adjValue };
+
+    setOrder([...order, newItem]);
+    setTotalOrder(totalOrder + adjValue);
+
+    console.log(order);
+    console.log(value);
+    console.log(name);
+    console.log(totalOrder);
+    console.log(adjValue);
+  };
+
+  const resetCart = (e) => {
+    e.preventDefault();
+    setOrder([]);
+    setTotalOrder(0);
+  }
+
   return(
     <div className="lista-items-delivery-container">
       <div className="header-lista-items-delivery">
@@ -72,6 +99,7 @@ const ListaDeliveryItems = () => {
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
                 <p className="price">R$ {item.PRICE_DELIVERY}</p>
+                <button name={item.ITEM} value={item.PRICE_DELIVERY} onClick={saveItem}>ADICIONAR</button>
               </div>
             ))
           ) : (
@@ -80,6 +108,7 @@ const ListaDeliveryItems = () => {
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
                 <p className="price">R$ {item.PRICE_MENU}</p>
+                <button name={item.ITEM} value={item.PRICE_MENU} onClick={saveItem}>ADICIONAR</button>
               </div>
             ))
           )
@@ -90,6 +119,7 @@ const ListaDeliveryItems = () => {
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
                 <p className="price">R$ {item.PRICE_DELIVERY}</p>
+                <button name={item.ITEM} value={item.PRICE_DELIVERY} onClick={saveItem} >ADICIONAR</button>
               </div>
             ))
           ) : (
@@ -98,12 +128,30 @@ const ListaDeliveryItems = () => {
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
                 <p className="price">R$ {item.PRICE_MENU}</p>
+                <button name={item.ITEM} value={item.PRICE_MENU} onClick={saveItem}>ADICIONAR</button>
               </div>
             ))
           )
         )
       }
       </div>
+      {
+        order && (
+          <div className="cart">
+          {
+            order.map((el, idx) => {
+              return (
+                <div className="cart-item" key={idx}>
+                  <p><span>{el.name}</span><span> R${el.adjValue}</span></p>
+                </div>
+              )
+            })
+          }
+            <p className="total-order">R$ {totalOrder}</p>
+            <button className="reset-order" onClick={resetCart}>RESET</button>
+          </div>
+        )
+      }
       {
         pageHeight > 100 && (
           <div className="go-up">
