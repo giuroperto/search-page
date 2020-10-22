@@ -59,12 +59,6 @@ const ListaDeliveryItems = () => {
 
     setOrder([...order, newItem]);
     setTotalOrder(totalOrder + adjValue);
-
-    console.log(order);
-    console.log(value);
-    console.log(name);
-    console.log(totalOrder);
-    console.log(adjValue);
   };
 
   const resetCart = (e) => {
@@ -94,7 +88,7 @@ const ListaDeliveryItems = () => {
       {
         search ? (
           type === 'DELIVERY' ? (
-            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
+            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY) && (item.PRICE_DELIVERY !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
               <div className="item" key={idx}>
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
@@ -103,7 +97,7 @@ const ListaDeliveryItems = () => {
               </div>
             ))
           ) : (
-            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_MENU !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
+            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_MENU) && (item.PRICE_MENU !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
               <div className="item" key={idx}>
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
@@ -114,7 +108,7 @@ const ListaDeliveryItems = () => {
           )
         ) : (
           type === 'DELIVERY' ? (
-            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0)).map((item, idx) => (
+            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY) && (item.PRICE_DELIVERY !== 0)).map((item, idx) => (
               <div className="item" key={idx}>
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
@@ -123,7 +117,7 @@ const ListaDeliveryItems = () => {
               </div>
             ))
           ) : (
-            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_MENU !== 0)).map((item, idx) => (
+            DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_MENU) && (item.PRICE_MENU !== 0)).map((item, idx) => (
               <div className="item" key={idx}>
                 <h4>{item.ITEM}</h4>
                 <p>{item.GROUP}</p>
@@ -164,20 +158,3 @@ const ListaDeliveryItems = () => {
 }
 
 export default ListaDeliveryItems;
-
-// search ? (
-//           DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0) && ((item.ITEM.toLowerCase().includes(searchWord.toLowerCase())) || (item.GROUP.toLowerCase().includes(searchWord.toLowerCase())))).map((item, idx) => (
-//             <div className="item" key={idx}>
-//               <h4>{item.ITEM}</h4>
-//               <p>{item.GROUP}</p>
-//               <p className="price">R$ {item.PRICE_DELIVERY}</p>
-//             </div>
-//           ))
-//         ) : (
-//           DadosDeliveryItems.filter((item) => (item.ACTIVE === "TRUE" || item.ACTIVE === "VERDADEIRO") && (item.PRICE_DELIVERY !== 0)).map((item, idx) => (
-//             <div className="item" key={idx}>
-//               <h4>{item.ITEM}</h4>
-//               <p>{item.GROUP}</p>
-//               <p className="price">R$ {item.PRICE_DELIVERY}</p>
-//             </div>
-//           )))
