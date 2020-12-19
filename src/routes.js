@@ -10,7 +10,7 @@ const Routes = () => {
 
   return(
     <div>
-      <Router basename="/consulta-delivery-out20">
+      <Router basename="/consulta-delivery-dez20">
         <Switch>
           <Route path={ROUTES.HOME} exact component={AllItems} />
         </Switch>
